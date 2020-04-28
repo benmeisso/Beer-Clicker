@@ -61,10 +61,11 @@ function multButton() {
     prixAff();
     multiplicateurIGAff();
     nbBeerAff();
+    gestionBouton();
 }
 
 function gestionBouton() {
-    if(score > prix) {
+    if(score >= prix) {
         document.getElementById('multiplier').disabled = false;
     }
     else
