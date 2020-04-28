@@ -9,14 +9,19 @@
 </head>
 <body>
     <!--Début boutton-->
-    <a onclick="clicBeer()"><img id="clic" alt="beer" src="images/beer.jpg"></a>
+    <a onclick="clicBeerAff()"><img id="clic" alt="beer" src="images/beer.jpg"></a>
     <!--/Fin boutton-->
     <br><br>
 
     <div id="affichage">
+        0 Bière
     </div>
-
-    <a onclick="augmenterMultiplicateur()"><img id="multiplier" alt="beer" src="images/beer.jpg"></a>
+    <div>
+        <div id="price">
+            Prix = 50
+        </div>
+        <input id="multiplier" type="button" value ="X2" Disabled onclick="multButton()">
+    </div>
     <br><br>
 </body>
 </html> 
