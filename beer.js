@@ -49,7 +49,7 @@ function clickMulticplicateur() {
     gestionBouton();
 }
 
-function clickBièreAff(){
+function clickBiereAff(){
     clickBiere();
     affichageNbBieres();
     gestionBouton();

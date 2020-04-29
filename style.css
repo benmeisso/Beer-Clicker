@@ -1,0 +1,33 @@
+#clic {
+    width: 12%;
+    height: 12%; 
+    margin-left: 48%;
+    margin-top: 4%;
+}
+
+body {
+    background-image: url(images/man-beer-bar-sit-high-stool-wooden-desk/2545.jpg);
+    background-size: 107%;
+    background-repeat: no-repeat;
+}
+
+#affichage {
+    color: white;
+    font-family: fantasy;
+    font-size: 200%;
+}
+
+#prix{
+    color: white;
+    font-family: fantasy;
+}
+
+#multiplier {
+    font-family: fantasy;
+    font-size: 250%;
+    display: flex;
+    margin-top: 20%;
+}   
+
+
+
