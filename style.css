@@ -3,8 +3,28 @@
     height: 12%; 
     margin-left: 48%;
     margin-top: 4%;
+    overflow: hidden;
+    cursor: pointer;
+    animation: pop 0.3s linear 1;
 }
 
+/*Bouton autoclik test*/
+#autoclick {
+    width: 12%;
+    height: 12%; 
+    float: right;
+}
+
+/******************************* Avec ce css l'image est responsive mais pas le texte ni le bouton ************************************/
+/*html { 
+    margin:0;
+    padding:0;
+    background: url(images/man-beer-bar-sit-high-stool-wooden-desk/2545.jpg) no-repeat center fixed; 
+    -webkit-background-size: cover; 
+    background-size: cover; 
+}*/  
+
+/******************************************** Css actuel mais surement pas responsive ******************************************/
 body {
     background-image: url(images/man-beer-bar-sit-high-stool-wooden-desk/2545.jpg);
     background-size: 107%;
@@ -27,7 +47,11 @@ body {
     font-size: 250%;
     display: flex;
     margin-top: 20%;
-}   
-
-
-
+    cursor: pointer;
+    color: black;
+    border-radius: 5%;
+}  
+/* changement de couleur en attendant la fonction js qui s'en charge */
+#multiplier:hover {
+    background-color: red;
+}

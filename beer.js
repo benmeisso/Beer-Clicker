@@ -5,6 +5,7 @@ let multiplicateur = 1;
 let multiplicateurSuivant = 2;
 
 
+
 /********************** Logique **********************/ 
 
 // Gestion des bières
@@ -62,3 +63,21 @@ function gestionBouton() {
     else
         document.getElementById('multiplier').disabled = true;
 }
+
+/*************************autocliker test mais vraiment pas concluant *************************/
+function autoClick() {
+    var element = document.getElementById('autoclick');
+      if(element !== undefined) {
+          doEvent(element, "click");
+      }
+      window.setTimeout(autoClick, 25, id);
+  }
+  
+  function doEvent(element, type) {
+      trigger = document.createEvent('HTMLEvents');
+      trigger.initEvent(type, true, true);
+      element.dispatchEvent(trigger);
+  }
+  
+  window.setTimeout(autoClick, 25, "bigCookie");
+  window.setTimeout(autoClick, 25, "goldenCookie");
