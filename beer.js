@@ -1,67 +1,57 @@
-let clic = 0;
-var score = 0;
-var multiplicateur = 1;
-var prix = 50;
-var multiplicateurAff = 2;
+let click = 0;
+let score = 0;
+let prix = 50;
+let multiplicateur = 1;
+let multiplicateurSuivant = 2;
 
-function someBeer(){ // Logique
-    score = score + multiplicateur;
-    return score;
-}
-function nbBeerAff() {
-    if(score !== 1) {
-        document.getElementById('affichage').innerText = Math.round(score) + " Bières";
-        document.title = score + " Bières";
-    }
-    else {
-        document.getElementById('affichage').innerText = score + " Bière";
-        document.title = score + " Bière";
-    }
+
+/********************** Logique **********************/ 
+
+// Gestion des bières
+function clickBiere(){
+    click += 1;
+    score += multiplicateur;
 }
 
+function achatMultiplicateur() {
+    // augmenterMultiplicateur
+    multiplicateur = multiplicateur + 1;
+    multiplicateurSuivant = multiplicateurSuivant + 1; 
 
-function clicBeerAff(){ // Affichage du nombre de bières
-    clic += 1;
-    someBeer();
-    nbBeerAff();
+    // calcul du nouveau score
+    score = score - prix;
+
+    // calcul nouveau prix
+    prix *= 1.2;
+}
+
+/********************** Affichage **********************/ 
+// Affichage du nombre de bières
+function affichageNbBieres() {
+    var text = Math.round(score) + " Bière"; 
+    if( score > 1 ) {
+        text += "s";
+    }
+    document.getElementById('affichage').innerText = text;
+    document.title = text;
+}
+function actualisationAffichage() {
+    document.getElementById('prix').innerText = "Prix = " + Math.round(prix);
+    document.getElementById('multiplier').value = "X" + multiplicateurSuivant;
+    affichageNbBieres();
+}
+
+/********************** Interface Utilisateur **********************/ 
+// Click sur le bouton d'achat multiplicateur
+function clickMulticplicateur() {
+    achatMultiplicateur();
+    actualisationAffichage();
     gestionBouton();
 }
 
-function augmenterMultiplicateur() {
-    multiplicateur = multiplicateur + 1;
-    return multiplicateur;
-}
-
-function augmenterMultiplicateurAff(){
-    multiplicateurAff = multiplicateurAff + 1;
-    return multiplicateurAff;
-}
-
-
-function calculPrix() {
-    prix *= 1.2;
-    return prix;
-}
-function prixAff() {
-    document.getElementById('price').innerText = "Prix = " + Math.round(prix);
-}
-
-function calculScore() {
-    score = score - prix;
-}
-
-function multiplicateurIGAff() {
-    document.getElementById('multiplier').value = "X" + multiplicateurAff;
-}
-
-function multButton() {
-    augmenterMultiplicateur();
-    augmenterMultiplicateurAff();
-    calculScore();
-    calculPrix();
-    prixAff();
-    multiplicateurIGAff();
-    nbBeerAff();
+function clickBièreAff(){
+    clickBiere();
+    affichageNbBieres();
     gestionBouton();
 }
 
