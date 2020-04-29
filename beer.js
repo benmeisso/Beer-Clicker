@@ -34,6 +34,7 @@ function augmenterMultiplicateur() {
 
 function augmenterMultiplicateurAff(){
     multiplicateurAff = multiplicateurAff + 1;
+    return multiplicateurAff;
 }
 
 
@@ -61,10 +62,11 @@ function multButton() {
     prixAff();
     multiplicateurIGAff();
     nbBeerAff();
+    gestionBouton();
 }
 
 function gestionBouton() {
-    if(score > prix) {
+    if(score >= prix) {
         document.getElementById('multiplier').disabled = false;
     }
     else
