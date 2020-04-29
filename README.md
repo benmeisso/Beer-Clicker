@@ -20,5 +20,5 @@ meilleurs se verront recevoir des trophées.
 
 Vous savez tout. Allez y essayez-le !
 
-Bon game !
+Bonne game !
 
