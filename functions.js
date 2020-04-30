@@ -24,6 +24,7 @@ function achatMultiplicateur() {
     // calcul nouveau prix
     prix *= 1.2;
 }
+
 function achatAutoClick() {
     autoClick = true;
     setInterval(clickBiereAff, 1000);
@@ -108,7 +109,7 @@ function entrerBar() {
     document.getElementById('prix').style.visibility= "visible";
     document.getElementById('multiplier').style.display= "flex";
     document.getElementById('multiplier').style.visibility= "visible";
-    document.getElementById('html').style.background = "url(images/man-beer-bar-sit-high-stool-wooden-desk/2545.jpg) no-repeat center ";
+    document.getElementById('html').style.background = "url(images/man-beer-bar-sit-high-stool-wooden-desk/2545.jpg) center ";
     document.getElementById('html').style.margin =0;
     document.getElementById('html').style.padding=0;
     document.getElementById('html').style.webkitBackgroundSize =  "cover";
