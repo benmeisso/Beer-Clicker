@@ -1,7 +1,7 @@
 #clic {
-    width: 12%;
-    height: 12%; 
-    margin-left: 50%;
+    width: 10%;
+    height: 10%;
+    margin-left: 48%;
     margin-top: 6%;
     overflow: hidden;
     cursor: pointer;
@@ -10,33 +10,19 @@
     display: none;
 }
 #porte{
-    color: black;
+    align-content: center;
+    color : gray;
     font-family: fantasy;
-    font-size: medium;
-    height: 50%;
-    margin-left: 35%;
-    margin-top: 20%;
-    overflow: hidden;
+    font-size: 150%;
     cursor: pointer;
-    animation: pop 0.3s linear 1;
+    border-radius: 5%;
 }
 
-
-/******************************* Avec ce css l'image est responsive mais pas le texte ni le bouton ************************************/
 #html {
-    margin:0;
-    padding:0;
-    background: url(images/man-beer-bar-sit-high-stool-wooden-desk/2081.jpg) no-repeat center fixed;
-    -webkit-background-size: cover; 
-    background-size: cover; 
+    background: url(images/man-beer-bar-sit-high-stool-wooden-desk/2081.jpg) no-repeat  center 30% ;
+    -webkit-background-size: cover;
+    background-size: cover;
 }
-
-/******************************************** Css actuel mais surement pas responsive ******************************************/
-/*body {
-    background-image: url(images/man-beer-bar-sit-high-stool-wooden-desk/2545.jpg);
-    background-size: 107%;
-    background-repeat: no-repeat;
-}*/
 
 #affichage {
     color: white;
@@ -51,25 +37,30 @@
     margin-top: 18%;
     font-size: x-large;
     visibility: hidden;
+    display: none;
+
 }
 
 #multiplier {
     font-family: fantasy;
     font-size: 250%;
-    display: none;
     margin-top: auto;
+    display: none;
     cursor: pointer;
     border-radius: 5%;
     background: #F5F5F5;
     visibility: hidden;
 }
-/*
-!*Bouton autoclik test*!
+
 #autoclick {
-    width: 12%;
-    height: 12%; 
-    float: right;
-}*/
+    border-radius: 5%;
+    font-family: fantasy;
+    font-size: 100%;
+    display: none;
+    cursor: pointer;
+    background: #F5F5F5;
+    visibility: hidden;
+}
 /*
 .loader {
     margin:0;

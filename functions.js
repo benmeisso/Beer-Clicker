@@ -1,8 +1,8 @@
-let click = 0;
 let score = 0;
 let prix = 50;
 let multiplicateur = 1;
 let multiplicateurSuivant = 2;
+let autoClick = false;
 
 
 
@@ -10,7 +10,6 @@ let multiplicateurSuivant = 2;
 
 // Gestion des bières
 function clickBiere(){
-    click += 1;
     score += multiplicateur;
 }
 
@@ -25,8 +24,14 @@ function achatMultiplicateur() {
     // calcul nouveau prix
     prix *= 1.2;
 }
+function achatAutoClick() {
+    autoClick = true;
+    setInterval(clickBiereAff, 1000);
+    score = score - 500;
 
-/********************** Affichage **********************/ 
+    // calcul nouveau prix
+}
+/********************** Affichage **********************/
 // Affichage du nombre de bières
 function affichageNbBieres() {
     var text = Math.round(score) + " Bière"; 
@@ -36,7 +41,10 @@ function affichageNbBieres() {
     document.getElementById('affichage').innerText = text;
     document.title = text;
 }
-function actualisationAffichage() {
+
+/********************** Affichage du Prix Multiplicateur **********************/
+
+function actualisationAffichageMultiplicateur() {
     document.getElementById('prix').innerText = "Prix = " + Math.round(prix);
     document.getElementById('multiplier').value = "X" + multiplicateurSuivant;
     affichageNbBieres();
@@ -46,8 +54,9 @@ function actualisationAffichage() {
 // Click sur le bouton d'achat multiplicateur
 function clickMulticplicateur() {
     achatMultiplicateur();
-    actualisationAffichage();
     gestionBouton();
+    actualisationAffichageMultiplicateur();
+
 }
 
 function clickBiereAff(){
@@ -55,7 +64,11 @@ function clickBiereAff(){
     affichageNbBieres();
     gestionBouton();
 }
+function clickAutoClick() {
+    gestionBouton();
+    achatAutoClick();
 
+}
 function gestionBouton() {
     if(score >= prix) {
         document.getElementById('multiplier').disabled = false;
@@ -65,16 +78,22 @@ function gestionBouton() {
         document.getElementById('multiplier').disabled = true;
         document.getElementById('multiplier').style.background = '#F5F5F5';
     }
-    if(score >=)
+
+    if(score >= 500 && autoClick === false) {
+        document.getElementById('autoclick').disabled = false;
+    }
+    else if(autoClick === false)
+    {
+        document.getElementById('autoclick').disabled = true;
+    }
+    else
+    {
+        document.getElementById('autoclick').disabled = true;
+        document.getElementById('autoclick').style.visibility = "hidden";
+
+
+    }
 }
-
-/************************* autocliker test mais vraiment pas concluant *************************/
-
-function autoClick() {
-
-    setInterval(clickBiereAff, 1000);
-}
-
 
   /********************** Entrée dans le bar ****************************************/
 
@@ -85,14 +104,17 @@ function entrerBar() {
     document.getElementById('clic').style.display= "block";
     document.getElementById('clic').style.visibility= "visible";
     document.getElementById('affichage').style.visibility= "visible";
+    document.getElementById('prix').style.display= "block";
     document.getElementById('prix').style.visibility= "visible";
     document.getElementById('multiplier').style.display= "flex";
     document.getElementById('multiplier').style.visibility= "visible";
-    document.getElementById('html').style.background = "url(images/man-beer-bar-sit-high-stool-wooden-desk/2545.jpg)";
+    document.getElementById('html').style.background = "url(images/man-beer-bar-sit-high-stool-wooden-desk/2545.jpg) no-repeat center ";
     document.getElementById('html').style.margin =0;
     document.getElementById('html').style.padding=0;
     document.getElementById('html').style.webkitBackgroundSize =  "cover";
     document.getElementById('html').style.backgroundSize = "cover";
+    document.getElementById('autoclick').style.display = "block";
+    document.getElementById('autoclick').style.visibility = "visible";
   }
 
 
