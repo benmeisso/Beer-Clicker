@@ -1,31 +1,41 @@
 
 <!DOCTYPE html>
-<html lang="en" xmlns="http://www.w3.org/1999/html">
+<html lang="en" xmlns="http://www.w3.org/1999/html" id="html">
 <head>
     <meta charset="UTF-8">
     <title>Beer Clicker</title>
-    <script type="text/javascript" src="beer.js"></script>
     <link rel="stylesheet" type="text/css" href="style.css">
 </head>
 <body>
-    <!--texte avec Compteur de bière-->
+
+    <!--  Page de chargement -->
+    <div id="loader">
+        <input id ="porte" type="button" value="Entrer dans le bar" onclick="entrerBar()">
+    </div>
+    <!--Score de bière-->
     <div id="affichage">
         0 Bière
     </div>  
 
-    <!--Bouton autoclik Test en haut à droite-->
+    <!--Bouton autoclik Test en haut à droite
     <a onclick="autoclick()"><img id="autoclick" alt="beer" src="images/beer.jpg"></a>
-
-    <!--Bonus X2 avec prix bonus-->
+-->
+    <!--Eléments interactifs-->
     <div>
-        <!--Début boutton-->
+        <!--Bière cliquable-->
         <a onclick="clickBiereAff()"><img id="clic" alt="beer" src="images/5a1d061d619349.6229751915118515493997.png"></a>
-        <!--/Fin boutton-->
+
+        <!--Prix-->
         <div id="prix">
             Prix = 50
         </div>
-        <input id="multiplier" type="button" value ="X2" Disabled onclick="clickMulticplicateur()">
-    </div>  
 
+        <!--Multiplicateur-->
+        <input id="multiplier" type="button" value ="X2" Disabled onclick="clickMulticplicateur()">
+
+    </div>
+    <!--Fin élements intéractifs-->
+    <script src="js/jquery.js"></script>
+    <script type="text/javascript" src="functions.js"></script>
 </body>
 </html> 

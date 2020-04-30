@@ -59,25 +59,40 @@ function clickBiereAff(){
 function gestionBouton() {
     if(score >= prix) {
         document.getElementById('multiplier').disabled = false;
+        document.getElementById('multiplier').style.background='#7CFC00';
     }
-    else
+    else {
         document.getElementById('multiplier').disabled = true;
+        document.getElementById('multiplier').style.background = '#F5F5F5';
+    }
+    if(score >=)
 }
 
-/*************************autocliker test mais vraiment pas concluant *************************/
+/************************* autocliker test mais vraiment pas concluant *************************/
+
 function autoClick() {
-    var element = document.getElementById('autoclick');
-      if(element !== undefined) {
-          doEvent(element, "click");
-      }
-      window.setTimeout(autoClick, 25, id);
+
+    setInterval(clickBiereAff, 1000);
+}
+
+
+  /********************** Entrée dans le bar ****************************************/
+
+
+function entrerBar() {
+    document.getElementById('loader').style.visibility= "hidden";
+    document.getElementById('loader').style.display= "none";
+    document.getElementById('clic').style.display= "block";
+    document.getElementById('clic').style.visibility= "visible";
+    document.getElementById('affichage').style.visibility= "visible";
+    document.getElementById('prix').style.visibility= "visible";
+    document.getElementById('multiplier').style.display= "flex";
+    document.getElementById('multiplier').style.visibility= "visible";
+    document.getElementById('html').style.background = "url(images/man-beer-bar-sit-high-stool-wooden-desk/2545.jpg)";
+    document.getElementById('html').style.margin =0;
+    document.getElementById('html').style.padding=0;
+    document.getElementById('html').style.webkitBackgroundSize =  "cover";
+    document.getElementById('html').style.backgroundSize = "cover";
   }
-  
-  function doEvent(element, type) {
-      trigger = document.createEvent('HTMLEvents');
-      trigger.initEvent(type, true, true);
-      element.dispatchEvent(trigger);
-  }
-  
-  window.setTimeout(autoClick, 25, "bigCookie");
-  window.setTimeout(autoClick, 25, "goldenCookie");
+
+

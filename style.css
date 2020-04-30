@@ -1,8 +1,21 @@
 #clic {
     width: 12%;
     height: 12%; 
-    margin-left: 45%;
+    margin-left: 50%;
     margin-top: 6%;
+    overflow: hidden;
+    cursor: pointer;
+    animation: pop 0.3s linear 1;
+    visibility: hidden;
+    display: none;
+}
+#porte{
+    color: black;
+    font-family: fantasy;
+    font-size: medium;
+    height: 50%;
+    margin-left: 35%;
+    margin-top: 20%;
     overflow: hidden;
     cursor: pointer;
     animation: pop 0.3s linear 1;
@@ -10,10 +23,10 @@
 
 
 /******************************* Avec ce css l'image est responsive mais pas le texte ni le bouton ************************************/
-html { 
+#html {
     margin:0;
     padding:0;
-    background: url(images/man-beer-bar-sit-high-stool-wooden-desk/2545.jpg) no-repeat center fixed; 
+    background: url(images/man-beer-bar-sit-high-stool-wooden-desk/2081.jpg) no-repeat center fixed;
     -webkit-background-size: cover; 
     background-size: cover; 
 }
@@ -29,6 +42,7 @@ html {
     color: white;
     font-family: fantasy;
     font-size: xx-large;
+    visibility: hidden;
 }
 
 #prix{
@@ -36,24 +50,86 @@ html {
     font-family: fantasy;
     margin-top: 18%;
     font-size: x-large;
+    visibility: hidden;
 }
 
 #multiplier {
     font-family: fantasy;
     font-size: 250%;
-    display: flex;
+    display: none;
     margin-top: auto;
     cursor: pointer;
     border-radius: 5%;
-}  
-/* changement de couleur en attendant la fonction js qui s'en charge */
-#multiplier:hover {
-    background-color: rgb(204, 224, 16);
+    background: #F5F5F5;
+    visibility: hidden;
 }
-
-/*Bouton autoclik test*/
+/*
+!*Bouton autoclik test*!
 #autoclick {
     width: 12%;
     height: 12%; 
     float: right;
+}*/
+/*
+.loader {
+    margin:0;
+    padding:0;
+    -webkit-background-size: cover;
+    background-size: cover;
+}*/
+/*#loader-wrapper{
+    position:fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1000;
 }
+#loader{
+    display:block;
+    position: relative;
+    left: 50%;
+    top: 50%;
+    width: 100px;
+    height: 150px;
+    margin: -75px 0 0 -75px;
+    z-index: 1001;
+}
+
+#loader-wrapper .loader-section{
+    position : fixed;
+    top : 0;
+    width: 51%;
+    height: 100%;
+    background: url("images/2081.jpg");
+    z-index: 1000;
+}
+#loader-wrapper .loader-section.section-left{
+    left:0;
+}
+#loader-wrapper .loader-section.section-left{
+    right:0;
+}*/
+
+/*
+.loader h1{
+    background: none;
+    border: none;
+    color: #458976;
+    font-size: 22px;
+    font-family: "Open Sans",sans-serif;
+    font-variant: small-caps;
+    font-weight: 700;
+    height: 700px;
+    line-height: 700px;
+    margin: 0 0 10px;
+    padding: 0;
+    text-align: center;
+}
+div.loader{
+    margin:0;
+    padding:0;
+    background: url(images/man-beer-bar-sit-high-stool-wooden-desk/2081.jpg) no-repeat center fixed;
+    -webkit-background-size: cover;
+    background-size: cover;
+}*/
