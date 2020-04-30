@@ -1,7 +1,7 @@
 Bienvenu sur notre Beer Clicker !
 
 Apprenant le langage JavaScript, nous avons comme projet la confection d'un Cookie CLicker façon Benoît & Brian.
-Nous avons donc décidé d'innover et de créer un cookie cliker qui nous parle à tous, l'appelant : Beer Clicker !
+Nous avons donc décidé d'innover et de créer un cookie clicker qui nous parle à tous, l'appelant : Beer Clicker !
 
 En effet comme son nom l'indique, plus question de cookie mais de bière. Nous avons pensé à un univers de bar à bières façon jeux video. 
 
