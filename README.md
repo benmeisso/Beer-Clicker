@@ -21,3 +21,4 @@ Vous savez tout. Allez y essayez-le !
 
 Good game !
 
+(Forkez ce dépot et lancez l'index.html, cliquez ensuite sur "Entrer dans le bar" et c'est parti !)
