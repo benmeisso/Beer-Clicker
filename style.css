@@ -6,29 +6,28 @@
     overflow: hidden;
     cursor: pointer;
     animation: pop 0.3s linear 1;
-    visibility: hidden;
-    display: none;
 }
-#porte{
+/*#porte{
     align-content: center;
     color : gray;
     font-family: fantasy;
     font-size: 150%;
     cursor: pointer;
     border-radius: 5%;
-}
+}*/
 /*<----------------- background -------------------->*/
 #html {
-    background: url(images/man-beer-bar-sit-high-stool-wooden-desk/2081-min.jpg) no-repeat  center 30% ;
+    background: url(images/man-beer-bar-sit-high-stool-wooden-desk/2545-min.jpg) no-repeat  center 30% ;
     -webkit-background-size: cover;
     background-size: cover;
+    width: 100%;
+    height:auto;
 }
 
 #affichage {
     color: white;
     font-family: fantasy;
     font-size: xx-large;
-    visibility: hidden;
 }
 
 #prix{
@@ -36,8 +35,6 @@
     font-family: fantasy;
     margin-top: 18%;
     font-size: x-large;
-    visibility: hidden;
-    display: none;
 
 }
 
@@ -45,21 +42,17 @@
     font-family: fantasy;
     font-size: 250%;
     margin-top: auto;
-    display: none;
     cursor: pointer;
     border-radius: 5%;
     background: #F5F5F5;
-    visibility: hidden;
 }
 
 #autoclick {
     border-radius: 5%;
     font-family: fantasy;
     font-size: 100%;
-    display: none;
     cursor: pointer;
     background: #F5F5F5;
-    visibility: hidden;
 }
 /* Tentative de loader avec effet slide droite gauche
 .loader {
