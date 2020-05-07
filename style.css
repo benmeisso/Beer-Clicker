@@ -1,6 +1,7 @@
 #clic {
-    width: 10%;
-    height: 10%;
+    position: fixed;
+    width: 20%;
+    height: 20%;
     margin-left: 48%;
     margin-top: 6%;
     overflow: hidden;
@@ -16,13 +17,25 @@
     border-radius: 5%;
 }*/
 /*<----------------- background -------------------->*/
-#html {
+/*#html {
     background: url(images/man-beer-bar-sit-high-stool-wooden-desk/2545-min.jpg) no-repeat  center 30% ;
     -webkit-background-size: cover;
     background-size: cover;
     width: 100%;
     height:auto;
-}
+}*/
+
+
+html {
+    /* image au centre */
+    background: url(images/man-beer-bar-sit-high-stool-wooden-desk/2545-min.jpg) no-repeat center center fixed;
+    /* utile pour que ça fonctionne sur tout les moteurs de recherche */
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    }
+
 
 #affichage {
     color: white;
